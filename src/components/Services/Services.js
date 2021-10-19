@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
 import Service from '../Service/Service';
+import './Services.css';
 
 const Services = () => {
     const [services,setServices]=useState([]);
@@ -11,7 +12,8 @@ const Services = () => {
     },[])
     return (
        <div>
-           <h2 className="text-primary mt-5">Our Services</h2>
+           <h2 className="text-center mt-5 text-success">Services We’re Offering
+            To Our Clients</h2>
            <div>
             <Row xs={1} md={3} className="g-4">
             {

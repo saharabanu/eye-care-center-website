@@ -45,6 +45,34 @@ const Header = () => {
 >
  Services
 </NavLink>
+      <NavLink
+  to="/news"
+  activeStyle={{
+    fontWeight: "bold",
+    color: "red"
+  }}
+>
+ News
+</NavLink>
+      <NavLink
+  to="/contactUs"
+  activeStyle={{
+    fontWeight: "bold",
+    color: "red"
+  }}
+>
+ContactUs
+</NavLink>
+      <NavLink
+  to="/register"
+  activeStyle={{
+    fontWeight: "bold",
+    color: "red"
+  }}
+>
+ Register
+</NavLink>
+
       { user?.email  ?
        <Button onClick={logOut} variant="secondary">LogOut</Button> :
        
@@ -68,7 +96,7 @@ const Header = () => {
           <div className="hero-text">
             <h1 style={{fontSize:"4rem text-white"}}>Our Eye Care Center </h1>
             <p className="card-text fs-4 text-white">Primary eye care provides the patient with the first contact for eye care as well as a lifetime of continuing care.   </p>
-            <button className="button draw-border p-3 header-button">SIGN UP</button>
+            
           </div>
         </div>
               

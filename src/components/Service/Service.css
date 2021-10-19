@@ -1,0 +1,7 @@
+.feature-card{
+    background-color: khaki;
+}
+.feature-card:hover {
+    background-color: dimgray;
+    color:white;
+  }

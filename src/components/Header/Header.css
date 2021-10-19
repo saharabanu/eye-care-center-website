@@ -1,5 +1,5 @@
 .hero-image {
-    background-image: url("https://media.istockphoto.com/photos/healthcare-people-eyesight-and-vision-concept-small-cute-blond-girl-picture-id939574552?b=1&k=20&m=939574552&s=170667a&w=0&h=8VR87tIrthmuKGiOoBtF4aADvFgeNVOg3KU2etzntF4=");
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxdXn6A4vwgsS4TOCphBStU3NSlA5wqbAnzw&usqp=CAU");
     height: 70vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -11,7 +11,9 @@
    h1{
     color: cornsilk;
   }
-  .header-button{
-    background-color:lightgreen ;
-    border-radius: 5px;
+  
+  
+  .header-bg a{
+    text-decoration:none ;
+    
   }

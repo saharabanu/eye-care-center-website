@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import CenterDetails from '../CenterDetails/CenterDetails';
 import Doctors from '../Doctors/Doctors';
 import Services from '../Services/Services';
-import SubHome from '../subHome/SubHome';
 import './Home.css';
 
 const Home = () => {
@@ -51,7 +50,7 @@ const Home = () => {
             </div>
             <Services></Services>
             <CenterDetails></CenterDetails>
-            <SubHome></SubHome>
+            
             <Doctors></Doctors>
             
         </div>

@@ -12,7 +12,7 @@ const SingleService = () => {
         .then(data=>setServiceDetils(data))
     },[])
     useEffect(()=>{
-        const foundSingleService= serviceDetails.find(service=>service.id== serviceId)
+        const foundSingleService= serviceDetails.find(service=>service.id == serviceId)
         setSingleService(foundSingleService)
     },[serviceDetails])
     

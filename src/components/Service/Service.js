@@ -1,12 +1,13 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './Service.css';
 
 const Service = ({service}) => {
     const {id,title,img,description}=service;
     return (
         <Col>
-        <Card className="pb-2 h-100">
+        <Card className="pb-2 h-100 feature-card">
         <Card.Img  variant="top" src={img}/>
           <Card.Body>
             <Card.Title >{title}</Card.Title>
