@@ -1,9 +1,10 @@
 import React from 'react';
+import './CenterDetails.css';
 
 const CenterDetails = () => {
     return (
-        <div className="container mt-5">
-            <div className="row justify-content-md-cente">
+        <div className="container mt-5 ">
+            <div className="row justify-content-center">
                 <div className="col-12 col-md-3 ">
                    
                 <h3>Scan Services</h3>

@@ -1,3 +1,5 @@
-/* .text-primary {
-    cursor: pointer;
-  } */
+.login-form{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
