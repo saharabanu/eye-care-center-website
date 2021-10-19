@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "img": "https://media.istockphoto.com/photos/portrait-of-confident-female-healthcare-professional-picture-id690657190?k=20&m=690657190&s=612x612&w=0&h=8PRjAI6Y8jbfnSW_gIvew4FheaUEEazztUR4uUHBYMY=",
+      "name": "Dr.Dipok Borua"
+    },
+    {
+      "id": 2,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy9JTbzOV0SXYsd3jqk5G_V3iqeoHQgQDhSg&usqp=CAU",
+      "name": "Dr.Anika Hosen"
+    },
+    {
+      "id": 3,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwsQOxzV7UaDKS-rgqaZEBQdM4CXRyMyZNtg&usqp=CAU",
+      "name": "Dr.Iftekhar Rahman"
+    },
+    {
+      "id": 4,
+      "img": "https://media.istockphoto.com/photos/male-medical-professional-is-confident-in-studio-picture-id1201439096?b=1&k=20&m=1201439096&s=170667a&w=0&h=YXdCLIT-e-reXi8xY-iUkg1XR4_C6TSXrljaHiFmhEU=",
+      "name": "Dr.Srijan Haque"
+    },
+    {
+      "id": 5,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZzQmlFPMiYXcILR2tq_JyDZBQDSCGZhrvWQ&usqp=CAU",
+      "name": "Dr.Asrika Uddin"
+    },
+    {
+      "id": 6,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXe1ZmKldDXDhJbZ7AREcCgXMbxh7CPjLk6g&usqp=CAU",
+      "name": "Dr.Masrur Ahmed"
+    }
+  ]

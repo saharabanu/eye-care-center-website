@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "img": "https://media.istockphoto.com/photos/ophthalmologist-with-female-patient-picture-id627977458?k=20&m=627977458&s=612x612&w=0&h=Ms7Og_AVIQXQup1O1aL4BzgSiGGhpnWO4XOpPKiOMyc=",
+        "title": "Surgical Procedure",
+        "description": "Eye surgery, also known as ocular surgery, is surgery performed on the eye by an ophthalmologist. The eye is a fragile organ, and requires extreme care before, during, and after a surgical procedure.  "
+      },
+      {
+        "id": 2,
+        "img": "https://media.istockphoto.com/photos/senior-doctor-examining-patient-doing-eyesight-measurement-in-clinic-picture-id1199302253?k=20&m=1199302253&s=612x612&w=0&h=xRjLR3KZeFZU1fOztsXWOqzuKDmU17zGlN8AmQMXfcU=",
+        "title": "All Laser Lasik",
+        "description": "LASIK, which stands for laser in-situ keratomileusis, is a popular surgery that can correct vision in people who are nearsighted or farsighted, or who have astigmatism."
+      },
+      {
+        "id": 3,
+        "img": "https://media.istockphoto.com/photos/people-at-hospital-background-blue-medical-backdrop-healthcare-picture-id1223067460?k=20&m=1223067460&s=612x612&w=0&h=2TL-2vRLY96aEcvFxAhNC4eD3FUrPK-7VEWfTIu22Zw=",
+        "title": "Cornea & Glaucoma",
+        "description": "The thinner the cornea the higher risk of developing glaucoma. The thinner corneas are also associated with an increased severity of visual field loss and a more rapid progression of the disease."
+      }
+]
