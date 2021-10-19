@@ -1,5 +1,5 @@
 import {
-  createUserWithEmailAndPassword, getAuth
+  createUserWithEmailAndPassword, getAuth, sendEmailVerification
 } from "firebase/auth";
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -9,6 +9,7 @@ initializeAuthentication();
 
 const Register = () => {
   const {signInUsingGoogle}= useAuth();
+  const {user}=useAuth()
   const auth = getAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -23,24 +24,25 @@ const Register = () => {
      setEmail(e.target.value);
   }
   const handlePasswordChange=e=>{
+   
+    if (e.target.value.length < 6) {
+      console.error("password must need to be at least 6 characters");
+      return;
+    } else {
       setPassword(e.target.value);
+    }
+      
   }
   
     const handleRegister=(e)=>{
       e.preventDefault();
         console.log(email,password);
-        if (password.length < 6) {
-          setError("password must need to be at least 6 characters");
-          return;
-        } ;
-        if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
-          setError('Password Must contain 2 upper case');
-          return;
-        }
+       
         createUserWithEmailAndPassword(auth, email, password)
         .then(result=>{
           const user= result.user;
           console.log(user)
+          verifyEmail();
           setError('');
         })
         .catch(error=>{
@@ -48,8 +50,15 @@ const Register = () => {
         })
         
     }
+    const verifyEmail = () => {
+      sendEmailVerification(auth.currentUser).then(() => {
+        // Email verification sent!
+        // ...
+      });
+    };
     return (
         <div className="mx-3">
+          <h1>{user.email}</h1>
             <h3 className="text-primary">Please {isLogin ? 'Login' : 'Register'}</h3>
             <form onSubmit={handleRegister}>
     <div className="row mb-3">
