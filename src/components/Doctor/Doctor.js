@@ -7,7 +7,7 @@ const Doctor = ({doctor}) => {
         <div className="feature">
         <Col >
     <Card className="feature-card h-100">
-    <Card.Img variant="top" src={img}/>
+    <Card.Img className="w-100" variant="top" src={img}/>
       <Card.Body>
         <Card.Title >{name}</Card.Title>
         

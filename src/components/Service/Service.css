@@ -5,3 +5,6 @@
     background-color: dimgray;
     color:white;
   }
+  .feature-card img{
+      width:100%;
+  }
