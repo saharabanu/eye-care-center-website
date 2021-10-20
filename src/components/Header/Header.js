@@ -63,15 +63,7 @@ const Header = () => {
 >
 ContactUs
 </NavLink>
-      <NavLink
-  to="/register"
-  activeStyle={{
-    fontWeight: "bold",
-    color: "red"
-  }}
->
- Register
-</NavLink>
+ 
 
       { user?.email  ?
        <Button onClick={logOut} variant="secondary">LogOut</Button> :
@@ -86,6 +78,7 @@ ContactUs
   Login
 </NavLink>}
   <h3>{user?.displayName}</h3>
+  <h4>{user?.email}</h4>
   
 </Stack>
     </Nav>

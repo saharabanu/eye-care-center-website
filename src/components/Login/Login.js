@@ -1,6 +1,6 @@
 import {
-    getAuth,
-    signInWithEmailAndPassword
+  getAuth,
+  signInWithEmailAndPassword
 } from "firebase/auth";
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -10,13 +10,14 @@ import './Login.css';
 initializeAuthentication();
 
 const Login = () => {
-    const {user}=useAuth();
+    
     const auth = getAuth();
     
-    const {signInUsingGoogle}= useAuth();
-    const [loggedInUser, setLoggedInUser] = useState({});
+    const {user,signInUsingGoogle}= useAuth();
+    // const [loggedInUser, setLoggedInUser] = useState({});
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    
     const [error, setError] = useState("");
     
 
@@ -35,14 +36,11 @@ const Login = () => {
         e.preventDefault();
         signInWithEmailAndPassword(auth, email, password)
         .then((result) => {
-          const { email, name, PhotoURL } = result.user;
-          const userInfo = {
-            name: name,
-            email: email,
-            photo: PhotoURL,
-          };
-          setLoggedInUser(userInfo);
+          const user= result.user;
+          console.log(user);
           setError("");
+          
+          
         })
         .catch((error) => {
           setError(error.message);
@@ -55,7 +53,7 @@ const Login = () => {
     
     return (
         <div className="login-form">
-             <h2>{loggedInUser.email}</h2>
+             {/* <h2>{loggedInUser.email}</h2> */}
             <div>
             <h2>Please Login</h2>
             <form onSubmit={handleLogIn}>
@@ -68,7 +66,7 @@ const Login = () => {
             <p className="text-danger">{error}</p>
             
             <br />
-            <p>new to Our Site<Link to='/register'>Create Account</Link></p>
+            <p >Are You new to Our Site? Please Regiter<Link to='/register'>Create Account</Link></p>
             <br /> <br />
             <div>
                 <button onClick={signInUsingGoogle} className="btn btn-primary">Google Sign In</button>
