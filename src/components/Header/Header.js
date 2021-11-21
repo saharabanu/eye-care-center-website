@@ -94,7 +94,7 @@ const Header = () => {
             <div className="hero-image">
           <div className="hero-text">
             <h1 style={{fontSize:"4rem text-white"}}>Our Eye Care Center </h1>
-            <p className="card-text fs-4 text-white">Primary eye care provides the patient with the first contact for eye care as well as a lifetime of continuing care.   </p>
+            <p className="card-text fs-4 text-white p-3">Primary eye care provides the patient with the first contact for eye care as well as a lifetime of continuing care.   </p>
             
           </div>
         </div>

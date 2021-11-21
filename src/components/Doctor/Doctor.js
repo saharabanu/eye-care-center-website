@@ -4,10 +4,10 @@ import { Card, Col } from 'react-bootstrap';
 const Doctor = ({doctor}) => {
     const {name,img}=doctor;
     return (
-        <div className="feature">
-        <Col >
+        <div className="feature container">
+        <Col>
     <Card className="feature-card h-100">
-    <Card.Img className="w-100" variant="top" src={img}/>
+    <Card.Img className="w-100 " variant="top" src={img}/>
       <Card.Body>
         <Card.Title >{name}</Card.Title>
         

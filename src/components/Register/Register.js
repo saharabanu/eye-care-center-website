@@ -26,7 +26,7 @@ const Register = () => {
         // console.log(data);
       };
     return (
-        <div>
+        <div style={{backgroundColor: 'hsla(89, 43%, 51%, 0.3)',marginBottom:'20px'}}>
             <h2>Please Register</h2>
             {!isLoading && <form onSubmit={handleSubmit(onSubmit)}>
         <input

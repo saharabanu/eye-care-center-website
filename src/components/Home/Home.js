@@ -14,7 +14,7 @@ const Home = () => {
                 <h3>About Eye Care</h3>
                 <p>Eye Care Center is one of Cairo’s most advanced one- day full service facilities providing comprehensive diagnostic and surgical ophthalmology procedures.
             Whether performing complex surgical procedures or a routine eye exam,We are thoroughly committed to deliver the utmost eye care.</p>
-            <Link to="/about"><button>Read More</button></Link>
+            <Link to="/about"><button className="btn btn-danger mb-3">Read More</button></Link>
             </div>
             <div className="col-md-4 col-12 info-2">
                 <h3>Our Service</h3>
@@ -41,6 +41,7 @@ const Home = () => {
                     From Sat Thu (9.00 - 21.00)
                     <br />
                     Mobile: +834555664
+                    <br />
                     Mobile: +4567845556
                 </p>
 

@@ -20,7 +20,7 @@ const Login = () => {
       signinWithGoogle(location,history);
     }
     return (
-        <div>
+        <div style={{backgroundColor: 'hsla(89, 43%, 51%, 0.3)',marginBottom:'20px'}}>
             <h2>Please Login</h2>
             { !isLoading && <form onSubmit={handleSubmit(onSubmit)}>
         
@@ -54,7 +54,7 @@ const Login = () => {
 
 
       <div>---------------------------------------</div>
-      <button onClick={handleGoogleSignIn} className="btn btn-warning">Google SignIn</button>
+      <button onClick={handleGoogleSignIn} className="btn btn-warning mb-3">Google SignIn</button>
 
         </div>
     );

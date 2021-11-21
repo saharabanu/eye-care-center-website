@@ -11,8 +11,8 @@ const Doctors = () => {
         .then(data=>setDoctors(data))
     },[])
     return (
-        <div>
-            <h2><span className="text-warning">Professionals</span>  Our Doctors</h2>
+        <div className="container mb-5">
+            <h2 className="mb-5"><span className="text-warning ">Professionals</span> Our Doctors</h2>
             <div>
             <Row xs={1} md={3} className="g-4">
                 {
