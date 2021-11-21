@@ -20,65 +20,65 @@ const Header = () => {
                   <div className="menu-items">
                     <div className="d-flex justify-content-end align-items-end ">
                       <div>
+                                      <NavLink className="header-item"
+                  to="/home"
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "red"
+                  }}
+                >
+                  Home
+                </NavLink>
                       <NavLink className="header-item"
-  to="/home"
-  activeStyle={{
-    fontWeight: "bold",
-    color: "red"
-  }}
->
-  Home
-</NavLink>
-      <NavLink className="header-item"
-  to="/about"
-  activeStyle={{
-    fontWeight: "bold",
-    color: "red"
-  }}
->
-  About
-</NavLink>
-      <NavLink className="header-item"
-  to="/services"
-  activeStyle={{
-    fontWeight: "bold",
-    color: "red"
-  }}
->
- Services
-</NavLink>
-      <NavLink className="header-item"
-  to="/news"
-  activeStyle={{
-    fontWeight: "bold",
-    color: "red"
-  }}
->
- News
-</NavLink>
-      <NavLink className="header-item"
-  to="/contactUs"
-  activeStyle={{
-    fontWeight: "bold",
-    color: "red"
-  }}
->
-ContactUs
-</NavLink>
- 
-
-      { user?.email  ?
-       <Button onClick={logOut} variant="secondary">LogOut</Button> :
-       
-        <NavLink className="header-item"
-    to="/login"
-    activeStyle={{
-    fontWeight: "bold",
-      color: "red"
-    }}
-  >
-  Login
-</NavLink>}
+                  to="/about"
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "red"
+                  }}
+                >
+                  About
+                </NavLink>
+                      <NavLink className="header-item"
+                  to="/services"
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "red"
+                  }}
+                >
+                Services
+                </NavLink>
+                      <NavLink className="header-item"
+                  to="/news"
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "red"
+                  }}
+                >
+                News
+                </NavLink>
+                      <NavLink className="header-item"
+                  to="/contactUs"
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "red"
+                  }}
+                >
+                ContactUs
+                </NavLink>
+                
+                    
+                      { user?.email  ?
+                      <Button onClick={logOut} variant="secondary">LogOut</Button> :
+                      <NavLink className="header-items"
+                                to="/login"
+                                activeStyle={{
+                                    fontWeight: "bold",
+                                    color: "red"
+                                }}
+                                >
+                                Login
+                                </NavLink>}
+                                <h4>{ user?.displayName}</h4>
                       </div>
 
                     </div>
@@ -88,68 +88,8 @@ ContactUs
             </div>
 
           </div>
-           
-      {/* <NavLink
-  to="/home"
-  activeStyle={{
-    fontWeight: "bold",
-    color: "red"
-  }}
->
-  Home
-</NavLink>
-      <NavLink
-  to="/about"
-  activeStyle={{
-    fontWeight: "bold",
-    color: "red"
-  }}
->
-  About
-</NavLink>
-      <NavLink
-  to="/services"
-  activeStyle={{
-    fontWeight: "bold",
-    color: "red"
-  }}
->
- Services
-</NavLink>
-      <NavLink
-  to="/news"
-  activeStyle={{
-    fontWeight: "bold",
-    color: "red"
-  }}
->
- News
-</NavLink>
-      <NavLink
-  to="/contactUs"
-  activeStyle={{
-    fontWeight: "bold",
-    color: "red"
-  }}
->
-ContactUs
-</NavLink>
- 
-
-      { user?.email  ?
-       <Button onClick={logOut} variant="secondary">LogOut</Button> :
-       
-        <NavLink
-    to="/login"
-    activeStyle={{
-    fontWeight: "bold",
-      color: "red"
-    }}
-  >
-  Login
-</NavLink>} */}
-  <h3>{user?.displayName}</h3>
-  <h4>{user?.email}</h4>
+      
+  
  
             <div className="hero-image">
           <div className="hero-text">

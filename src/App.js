@@ -42,14 +42,14 @@ function App() {
            <SingleService></SingleService>
          </PrivateRoute>
           
-         <PrivateRoute path='/news'>
+         <Route path='/news'>
            <News></News>
 
-         </PrivateRoute>
-         <PrivateRoute path='/contactUs'>
+         </Route>
+         <Route path='/contactUs'>
            <ContactUs></ContactUs>
 
-         </PrivateRoute>
+         </Route>
          <Route path='/login'>
            <Login></Login>
 

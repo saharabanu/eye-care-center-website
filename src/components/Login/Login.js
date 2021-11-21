@@ -1,77 +1,61 @@
-import {
-  getAuth,
-  signInWithEmailAndPassword
-} from "firebase/auth";
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import initializeAuthentication from '../../Firebase/Firebase.init';
+import React from 'react';
+import { Alert, Spinner } from 'react-bootstrap';
+import { useForm } from "react-hook-form";
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
-import './Login.css';
-initializeAuthentication();
 
 const Login = () => {
+  const {user,loginUser,signinWithGoogle,isLoading,error} = useAuth();
+    const { register, handleSubmit, } = useForm();
     
-    const auth = getAuth();
-    
-    const {user,signInUsingGoogle}= useAuth();
-    // const [loggedInUser, setLoggedInUser] = useState({});
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    
-    const [error, setError] = useState("");
-    
+      const location = useLocation();
+      const history = useHistory();
 
-    const handleEmailChange=e=>{
-        
-       setEmail(e.target.value);
+    const onSubmit = (data) => {
+
+      loginUser(data.email, data.password,location,history);
+        // console.log(data);
+    };
+    const handleGoogleSignIn =()=>{
+      signinWithGoogle(location,history);
     }
-    const handlePasswordChange=e=>{
-       
-            setPassword(e.target.value);
-          
-        
-    }
-    const handleLogIn=(e)=>{
-        console.log(email,password);
-        e.preventDefault();
-        signInWithEmailAndPassword(auth, email, password)
-        .then((result) => {
-          const user= result.user;
-          console.log(user);
-          setError("");
-          
-          
-        })
-        .catch((error) => {
-          setError(error.message);
-        });
-        
-
-
-
-    }
-    
     return (
-        <div className="login-form">
-             {/* <h2>{loggedInUser.email}</h2> */}
-            <div>
+        <div>
             <h2>Please Login</h2>
-            <form onSubmit={handleLogIn}>
-            <input onChange={handleEmailChange} type="text" placeholder="Your Email"required/>
-            <br /><br />
-            <input  onChange={handlePasswordChange}type="password" placeholder="Your password"required/>
-            <br /><br />
-            <input type="submit" value="Submit"/>
-            </form>
-            <p className="text-danger">{error}</p>
-            
-            <br />
-            <p >Are You new to Our Site? Please Regiter<Link to='/register'>Create Account</Link></p>
-            <br /> <br />
-            <div>
-                <button onClick={signInUsingGoogle} className="btn btn-primary">Google Sign In</button>
-            </div>
-            </div>
+            { !isLoading && <form onSubmit={handleSubmit(onSubmit)}>
+        
+        <input
+          className="input-field mb-3"
+          name="email"
+          placeholder="Email"
+          type="email"
+          {...register("email", { required: true })}
+        />
+        <br />
+        <input
+          className="input-field mb-3"
+          name="password"
+          type="password"
+          placeholder="Password"
+          {...register("password", { required: true })}
+        />
+        <br />
+        <input
+          className="submit-btn btn btn-danger mt-3"
+          type="submit"
+          value="Login"
+        />
+      </form>}
+      {isLoading && <Spinner animation="border" variant="danger" />}
+      {user?.email && <Alert
+      variant="success">Create user successfully</Alert>}
+      {error && <Alert variant="danger">{error}</Alert>}
+      <p>Are You New User?<Link to='/register'>Please Register</Link></p>
+
+
+      <div>---------------------------------------</div>
+      <button onClick={handleGoogleSignIn} className="btn btn-warning">Google SignIn</button>
+
         </div>
     );
 };
